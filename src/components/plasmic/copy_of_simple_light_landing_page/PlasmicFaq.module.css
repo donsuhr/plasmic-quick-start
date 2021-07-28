@@ -1,0 +1,42 @@
+.root:global(.__wab_instance) {
+  position: relative;
+}
+.freeBox__dqMnt {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.freeBox__dqMnt > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 8px);
+  height: calc(100% + 8px);
+}
+.freeBox__dqMnt > :global(.__wab_flex-container) > *,
+.freeBox__dqMnt > :global(.__wab_flex-container) > :global(.__wab_slot) > * {
+  margin-top: 8px;
+}
+.freeBox__mwMio {
+  display: flex;
+  flex-direction: row;
+}
+.freeBox__qj4E {
+  display: flex;
+  position: relative;
+}
+.slotChildren {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  color: rgb(5, 5, 5) /* plasmic-token: NEon4Y--Z */;
+}
+.slotSlot {
+  text-align: left;
+}
+.svg___2Yym2 {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  object-fit: cover;
+}
