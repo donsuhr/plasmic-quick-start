@@ -1,0 +1,19 @@
+.root {
+  font-size: 96px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  color: rgb(5, 5, 5) /* plasmic-token: NEon4Y--Z */;
+  position: relative;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    font-size: 48px;
+  }
+}
+.root__color_red {
+  color: rgb(234, 234, 234) /* plasmic-token: p4hYtdTx93lX92 */;
+}
+.root__color_blue {
+  color: #33f563 /* plasmic-token: _bJmzP_7a */;
+}

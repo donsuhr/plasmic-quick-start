@@ -993,7 +993,7 @@
     {
       "name": "Spectrum/Coral/50",
       "type": "color",
-      "value": "rgb(245,83,61)",
+      "value": "#F5533D",
       "category": "color",
       "meta": {
         "projectId": "seaQhLVS4bbjiGvJJrRwyL",
@@ -2981,6 +2981,26 @@
       }
     },
     {
+      "name": "UnnamedStyleToken",
+      "type": "color",
+      "value": "rgb(0,0,0)",
+      "category": "color",
+      "meta": {
+        "projectId": "seaQhLVS4bbjiGvJJrRwyL",
+        "id": "PgHNel3rj"
+      }
+    },
+    {
+      "name": "UnnamedStyleToken 2",
+      "type": "color",
+      "value": "rgb(240,242,245)",
+      "category": "color",
+      "meta": {
+        "projectId": "seaQhLVS4bbjiGvJJrRwyL",
+        "id": "Z1Yc3F-9C"
+      }
+    },
+    {
       "name": "divider",
       "type": "color",
       "value": "rgb(234,234,234)",
@@ -2988,6 +3008,16 @@
       "meta": {
         "projectId": "pR5bvw2qHzxLEoDYFfc4Gw",
         "id": "p4hYtdTx93lX92"
+      }
+    },
+    {
+      "name": "my green",
+      "type": "color",
+      "value": "#33F563",
+      "category": "color",
+      "meta": {
+        "projectId": "pR5bvw2qHzxLEoDYFfc4Gw",
+        "id": "_bJmzP_7a"
       }
     },
     {

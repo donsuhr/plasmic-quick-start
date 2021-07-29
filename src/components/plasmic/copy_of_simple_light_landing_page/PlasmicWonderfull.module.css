@@ -1,0 +1,38 @@
+.root {
+  background: linear-gradient(
+      90deg,
+      rgb(51, 140, 245) 0%,
+      rgb(79, 209, 197) 100%
+    )
+    0% 0% / 100% 100% padding-box /* clip: text **/;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.root__alternate {
+  background: linear-gradient(90deg, #f53333 0%, rgb(79, 209, 197) 100%) 0% 0% /
+    100% 100% padding-box /* clip: text **/;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.slotChildren {
+  font-size: 96px;
+  font-weight: 700;
+  color: #338cf5;
+  text-align: center;
+  line-height: 1;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .slotChildren {
+    font-size: 48px;
+  }
+}
+.slotChildren__alternate {
+  color: #f53333;
+}
+.slotChildren__foo {
+  color: #33f563 /* plasmic-token: _bJmzP_7a */;
+}

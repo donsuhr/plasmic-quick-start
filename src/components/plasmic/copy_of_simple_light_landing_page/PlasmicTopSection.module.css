@@ -51,38 +51,6 @@
   align-items: stretch;
   justify-content: flex-start;
 }
-.freeBox__vCf3B {
-  font-size: 96px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1;
-  color: rgb(5, 5, 5) /* plasmic-token: NEon4Y--Z */;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__vCf3B {
-    font-size: 48px;
-  }
-}
-.freeBox__tuiPc {
-  font-size: 96px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1;
-  color: rgba(51, 140, 245, 0);
-  background: linear-gradient(
-      90deg,
-      rgb(51, 140, 245) 0%,
-      rgb(79, 209, 197) 100%
-    )
-    0% 0% / 100% 100% padding-box /* clip: text **/;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__tuiPc {
-    font-size: 48px;
-  }
-}
 .freeBox__cxJ8Q {
   font-size: 20px;
   text-align: center;
@@ -117,6 +85,9 @@
 .linkButton__mQgs0:global(.__wab_instance) {
   position: relative;
 }
+.link {
+  position: relative;
+}
 .freeBox__jix1F {
   display: flex;
   position: relative;
@@ -135,4 +106,9 @@
   margin-top: 32px;
   min-width: 0;
   min-height: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img {
+    display: none;
+  }
 }

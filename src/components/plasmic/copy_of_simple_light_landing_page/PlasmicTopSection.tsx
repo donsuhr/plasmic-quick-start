@@ -30,7 +30,11 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import MakeThings from "../../MakeThings"; // plasmic-import: BOhrI2DmHs/component
+import Wonderfull from "../../Wonderfull"; // plasmic-import: x7QwHx-Jf7/component
 import LinkButton from "../../LinkButton"; // plasmic-import: YrkIuHbKh3C2RJ/component
+
+import { useScreenVariants } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 176-5-k3VAllNq/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
@@ -51,6 +55,9 @@ export const PlasmicTopSection__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicTopSection__OverridesType = {
   root?: p.Flex<"div">;
+  makeThings?: p.Flex<typeof MakeThings>;
+  wonderfull?: p.Flex<typeof Wonderfull>;
+  link?: p.Flex<"a">;
   img?: p.Flex<"img">;
 };
 
@@ -66,6 +73,10 @@ function PlasmicTopSection__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, args, overrides, forNode, dataFetches } = props;
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariants()
+  });
 
   return (
     <div
@@ -86,25 +97,21 @@ function PlasmicTopSection__RenderFunc(props: {
           className={classNames(defaultcss.all, sty.freeBox__jq0Up)}
         >
           <div className={classNames(defaultcss.all, sty.freeBox__fsL83)}>
-            <div
-              className={classNames(
-                defaultcss.all,
-                defaultcss.__wab_text,
-                sty.freeBox__vCf3B
-              )}
-            >
-              {"Make your website"}
-            </div>
+            <MakeThings
+              data-plasmic-name={"makeThings"}
+              data-plasmic-override={overrides.makeThings}
+              className={classNames("__wab_instance", sty.makeThings)}
+            />
 
-            <div
-              className={classNames(
-                defaultcss.all,
-                defaultcss.__wab_text,
-                sty.freeBox__tuiPc
-              )}
+            <Wonderfull
+              data-plasmic-name={"wonderfull"}
+              data-plasmic-override={overrides.wonderfull}
+              className={classNames("__wab_instance", sty.wonderfull)}
+              forcefield={["fo", "things"]}
+              singleSlect={"two" as const}
             >
-              {"wonderful"}
-            </div>
+              {"Wonderfull"}
+            </Wonderfull>
           </div>
 
           <div
@@ -138,15 +145,30 @@ function PlasmicTopSection__RenderFunc(props: {
           />
         </p.Stack>
 
+        <a
+          data-plasmic-name={"link"}
+          data-plasmic-override={overrides.link}
+          className={classNames(
+            defaultcss.all,
+            defaultcss.__wab_text,
+            sty.link
+          )}
+          href={"https://www.plasmic.app/" as const}
+        >
+          {"Some link text"}
+        </a>
+
         <div className={classNames(defaultcss.all, sty.freeBox__jix1F)}>
-          <img
-            data-plasmic-name={"img"}
-            data-plasmic-override={overrides.img}
-            alt={""}
-            className={classNames(defaultcss.img, sty.img)}
-            role={"img"}
-            src={heroImageKyx3OmCxqfh8Sb}
-          />
+          {(hasVariant(globalVariants, "screen", "mobile") ? true : true) ? (
+            <img
+              data-plasmic-name={"img"}
+              data-plasmic-override={overrides.img}
+              alt={""}
+              className={classNames(defaultcss.img, sty.img)}
+              role={"img"}
+              src={heroImageKyx3OmCxqfh8Sb}
+            />
+          ) : null}
         </div>
       </p.Stack>
     </div>
@@ -154,7 +176,10 @@ function PlasmicTopSection__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "img"],
+  root: ["root", "makeThings", "wonderfull", "link", "img"],
+  makeThings: ["makeThings"],
+  wonderfull: ["wonderfull"],
+  link: ["link"],
   img: ["img"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -162,6 +187,9 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  makeThings: typeof MakeThings;
+  wonderfull: typeof Wonderfull;
+  link: "a";
   img: "img";
 };
 
@@ -226,6 +254,9 @@ export const PlasmicTopSection = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    makeThings: makeNodeComponent("makeThings"),
+    wonderfull: makeNodeComponent("wonderfull"),
+    link: makeNodeComponent("link"),
     img: makeNodeComponent("img"),
 
     // Metadata about props expected for PlasmicTopSection

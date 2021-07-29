@@ -258,6 +258,32 @@
           "cssFilePath": "plasmic/copy_of_simple_light_landing_page/PlasmicFeatures.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "x7QwHx-Jf7",
+          "name": "Wonderfull",
+          "type": "managed",
+          "projectId": "pR5bvw2qHzxLEoDYFfc4Gw",
+          "renderModuleFilePath": "plasmic/copy_of_simple_light_landing_page/PlasmicWonderfull.tsx",
+          "importSpec": {
+            "modulePath": "Wonderfull.tsx"
+          },
+          "cssFilePath": "plasmic/copy_of_simple_light_landing_page/PlasmicWonderfull.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "BOhrI2DmHs",
+          "name": "MakeThings",
+          "type": "managed",
+          "projectId": "pR5bvw2qHzxLEoDYFfc4Gw",
+          "renderModuleFilePath": "plasmic/copy_of_simple_light_landing_page/PlasmicMakeThings.tsx",
+          "importSpec": {
+            "modulePath": "MakeThings.tsx"
+          },
+          "cssFilePath": "plasmic/copy_of_simple_light_landing_page/PlasmicMakeThings.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
